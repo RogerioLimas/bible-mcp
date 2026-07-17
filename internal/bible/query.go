@@ -45,7 +45,7 @@ func (s *Store) Verses(versionName string, book Book, chapter, verseStart, verse
 		verses = append(verses, vt)
 	}
 	if err := rows.Err(); err != nil {
-		return nil, err
+		return nil, fmt.Errorf("lendo versículos: %w", err)
 	}
 	if len(verses) == 0 {
 		return nil, fmt.Errorf("nenhum versículo encontrado para %s %d:%d-%d na versão %q", book.Name, chapter, verseStart, verseEnd, versionName)

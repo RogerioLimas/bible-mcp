@@ -55,6 +55,7 @@ func Open(dir string) (*Store, error) {
 			return nil, fmt.Errorf("%s: %w", path, err)
 		}
 		if _, exists := store.versions[v.name]; exists {
+			v.db.Close()
 			store.Close()
 			return nil, fmt.Errorf("%s: Versão %q duplicada", path, v.name)
 		}
@@ -120,7 +121,7 @@ func validateBooks(db *sql.DB) (map[int]int, error) {
 		count++
 	}
 	if err := rows.Err(); err != nil {
-		return nil, err
+		return nil, fmt.Errorf("lendo book: %w", err)
 	}
 	if count != len(Canon) {
 		return nil, fmt.Errorf("%d livros encontrados, esperado %d", count, len(Canon))
