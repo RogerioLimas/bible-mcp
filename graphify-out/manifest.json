@@ -1,12 +1,192 @@
 {
   ".claude/settings.local.json": {
-    "mtime": 1784158536.6522758,
-    "ast_hash": "befd77a90d244f1da2581c56a09d36ed",
-    "semantic_hash": "befd77a90d244f1da2581c56a09d36ed"
+    "mtime": 1784335629.9834237,
+    "ast_hash": "afd29efd2049a1b8e8392b80fe7f846e",
+    "semantic_hash": "afd29efd2049a1b8e8392b80fe7f846e"
   },
   "CLAUDE.md": {
-    "mtime": 1784158608.2162642,
-    "ast_hash": "3df9de307e4c2c2d6fc716c71c44c6a6",
-    "semantic_hash": "3df9de307e4c2c2d6fc716c71c44c6a6"
+    "mtime": 1784380223.902355,
+    "ast_hash": "f0a8eb8078398edaca846ec1b8758a35",
+    "semantic_hash": "f0a8eb8078398edaca846ec1b8758a35"
+  },
+  ".claude/hooks/phase-gate.sh": {
+    "mtime": 1784246379.4661002,
+    "ast_hash": "f921d176e3b44b1df02e65f1c9f3d4bd",
+    "semantic_hash": "f921d176e3b44b1df02e65f1c9f3d4bd"
+  },
+  ".claude/settings.json": {
+    "mtime": 1784246439.5100937,
+    "ast_hash": "c0b0780577765929a505307243205c6d",
+    "semantic_hash": "c0b0780577765929a505307243205c6d"
+  },
+  "go.mod": {
+    "mtime": 1784306547.3293357,
+    "ast_hash": "42262dfa32fa969332a2f12c79e93b23",
+    "semantic_hash": "42262dfa32fa969332a2f12c79e93b23"
+  },
+  "internal/bible/canon.go": {
+    "mtime": 1784306547.3293357,
+    "ast_hash": "32966b8c887bfe6b57278182d8f2e060",
+    "semantic_hash": "32966b8c887bfe6b57278182d8f2e060"
+  },
+  "internal/bible/canon_test.go": {
+    "mtime": 1784306547.3293357,
+    "ast_hash": "a59571a49d9bdec4351feb687bd68e46",
+    "semantic_hash": "a59571a49d9bdec4351feb687bd68e46"
+  },
+  "internal/bible/format.go": {
+    "mtime": 1784306547.3293357,
+    "ast_hash": "7e12cd02added9aee37e682e46d9833d",
+    "semantic_hash": "7e12cd02added9aee37e682e46d9833d"
+  },
+  "internal/bible/format_test.go": {
+    "mtime": 1784306547.3293357,
+    "ast_hash": "a174197282b3c8bebb2f435c2c8ec544",
+    "semantic_hash": "a174197282b3c8bebb2f435c2c8ec544"
+  },
+  "internal/bible/query.go": {
+    "mtime": 1784306547.3293357,
+    "ast_hash": "cea3016827bc36d106888c3f19c48e59",
+    "semantic_hash": "cea3016827bc36d106888c3f19c48e59"
+  },
+  "internal/bible/query_test.go": {
+    "mtime": 1784306547.3293357,
+    "ast_hash": "3ee33c5ae1c756d421143959f53fd65a",
+    "semantic_hash": "3ee33c5ae1c756d421143959f53fd65a"
+  },
+  "internal/bible/store.go": {
+    "mtime": 1784306547.3293357,
+    "ast_hash": "23e75f5f592712538bfe0a0ddfd51b71",
+    "semantic_hash": "23e75f5f592712538bfe0a0ddfd51b71"
+  },
+  "internal/bible/store_test.go": {
+    "mtime": 1784306547.3293357,
+    "ast_hash": "f7334457c2180402d8181a7e1b5ac415",
+    "semantic_hash": "f7334457c2180402d8181a7e1b5ac415"
+  },
+  "internal/mcpserver/schema.go": {
+    "mtime": 1784306547.3293357,
+    "ast_hash": "0a3ad1a8e909905ae0dc989eeef0db56",
+    "semantic_hash": "0a3ad1a8e909905ae0dc989eeef0db56"
+  },
+  "internal/mcpserver/schema_test.go": {
+    "mtime": 1784306547.3293357,
+    "ast_hash": "0499adcac3a82c55e7aad56d4abdaeb9",
+    "semantic_hash": "0499adcac3a82c55e7aad56d4abdaeb9"
+  },
+  "internal/mcpserver/server.go": {
+    "mtime": 1784306547.3293357,
+    "ast_hash": "dd274a9edfc8317a24d7b9983330432f",
+    "semantic_hash": "dd274a9edfc8317a24d7b9983330432f"
+  },
+  "internal/mcpserver/server_test.go": {
+    "mtime": 1784306547.3293357,
+    "ast_hash": "1fb010f1d5fa0a5429bbfa70d3db6951",
+    "semantic_hash": "1fb010f1d5fa0a5429bbfa70d3db6951"
+  },
+  "internal/mcpserver/tools.go": {
+    "mtime": 1784307868.3930655,
+    "ast_hash": "05e82bdc50f9e4249d6784c32fae03ff",
+    "semantic_hash": "05e82bdc50f9e4249d6784c32fae03ff"
+  },
+  "internal/mcpserver/tools_test.go": {
+    "mtime": 1784307868.3930655,
+    "ast_hash": "5993f28765d39470ad2c72a9bceab2b8",
+    "semantic_hash": "5993f28765d39470ad2c72a9bceab2b8"
+  },
+  "main.go": {
+    "mtime": 1784306547.3293357,
+    "ast_hash": "9d81099cabf926a6a8c1602a0d1cae43",
+    "semantic_hash": "9d81099cabf926a6a8c1602a0d1cae43"
+  },
+  ".claude/commands/spdd-analysis.md": {
+    "mtime": 1784164149.0157762,
+    "ast_hash": "3c3a7ca28d38f77d1ccf96b3f7f7c951",
+    "semantic_hash": "3c3a7ca28d38f77d1ccf96b3f7f7c951"
+  },
+  ".claude/commands/spdd-generate.md": {
+    "mtime": 1784164149.0157762,
+    "ast_hash": "194428f8c3e762c6ad624912de434989",
+    "semantic_hash": "194428f8c3e762c6ad624912de434989"
+  },
+  ".claude/commands/spdd-prompt-update.md": {
+    "mtime": 1784164149.0197763,
+    "ast_hash": "29aaf829c205cd5e428f31f78229ebe7",
+    "semantic_hash": "29aaf829c205cd5e428f31f78229ebe7"
+  },
+  ".claude/commands/spdd-reasons-canvas.md": {
+    "mtime": 1784164149.0197763,
+    "ast_hash": "51d65fc77dee58610bfa9df91dff2595",
+    "semantic_hash": "51d65fc77dee58610bfa9df91dff2595"
+  },
+  ".claude/commands/spdd-sync.md": {
+    "mtime": 1784164149.0197763,
+    "ast_hash": "53855694a3a9b3b626f5ccf04729a77d",
+    "semantic_hash": "53855694a3a9b3b626f5ccf04729a77d"
+  },
+  ".opencode/commands/spdd-analysis.md": {
+    "mtime": 1784164156.4557748,
+    "ast_hash": "a67498dfa68a734d9ce202eceb6c5046",
+    "semantic_hash": "a67498dfa68a734d9ce202eceb6c5046"
+  },
+  ".opencode/commands/spdd-generate.md": {
+    "mtime": 1784164156.4557748,
+    "ast_hash": "52ae6542507b95e611622238b98e2f08",
+    "semantic_hash": "52ae6542507b95e611622238b98e2f08"
+  },
+  ".opencode/commands/spdd-prompt-update.md": {
+    "mtime": 1784164156.4557748,
+    "ast_hash": "0aef0620b242d19ba1c5c5eeb86fe5a4",
+    "semantic_hash": "0aef0620b242d19ba1c5c5eeb86fe5a4"
+  },
+  ".opencode/commands/spdd-reasons-canvas.md": {
+    "mtime": 1784164156.4557748,
+    "ast_hash": "f6b20bebca426520688d72c6a303ef24",
+    "semantic_hash": "f6b20bebca426520688d72c6a303ef24"
+  },
+  ".opencode/commands/spdd-sync.md": {
+    "mtime": 1784164156.4557748,
+    "ast_hash": "913deaf055685b9d1d96711bc3e45377",
+    "semantic_hash": "913deaf055685b9d1d96711bc3e45377"
+  },
+  "CONTEXT.md": {
+    "mtime": 1784238676.466004,
+    "ast_hash": "799dd11119bcf927479674f44e99bc02",
+    "semantic_hash": "799dd11119bcf927479674f44e99bc02"
+  },
+  "README.md": {
+    "mtime": 1784390317.0882945,
+    "ast_hash": "ad880957c2e322d24ae12be46c579854",
+    "semantic_hash": "ad880957c2e322d24ae12be46c579854"
+  },
+  "docs/BACKLOG.md": {
+    "mtime": 1784166200.4233525,
+    "ast_hash": "3ef6391721a99767c23f22864bc6bf04",
+    "semantic_hash": "3ef6391721a99767c23f22864bc6bf04"
+  },
+  "docs/adr/0001-canonical-book-identity.md": {
+    "mtime": 1784165744.4754472,
+    "ast_hash": "949c31c7f7111cf885d4fc930a1cc398",
+    "semantic_hash": "949c31c7f7111cf885d4fc930a1cc398"
+  },
+  "docs/adr/0002-external-data-directory.md": {
+    "mtime": 1784166628.26327,
+    "ast_hash": "19d036f5b8d5cffd0482908165940227",
+    "semantic_hash": "19d036f5b8d5cffd0482908165940227"
+  },
+  "docs/superpowers/plans/2026-07-15-bible-mcp.md": {
+    "mtime": 1784167649.2910626,
+    "ast_hash": "967b005f6d277834ce914c0d6f34f243",
+    "semantic_hash": "967b005f6d277834ce914c0d6f34f243"
+  },
+  "spdd/analysis/GGQPA-XXX-202607162039-[Analysis]-bible-mcp-verse-tools.md": {
+    "mtime": 1784245243.9383516,
+    "ast_hash": "3f1adf73d6cd44c3c127a15427d2a732",
+    "semantic_hash": "3f1adf73d6cd44c3c127a15427d2a732"
+  },
+  "spdd/prompt/GGQPA-XXX-202607162106-[Feat]-mcp-verse-passage-chapter-tools.md": {
+    "mtime": 1784246852.9220216,
+    "ast_hash": "0fa80cea2359d33007abfe85d5ad541c",
+    "semantic_hash": "0fa80cea2359d33007abfe85d5ad541c"
   }
 }

@@ -4,15 +4,30 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Estado atual do projeto
 
-Este repositório ainda não contém código-fonte, build tooling, testes ou um `package.json`/manifest de qualquer runtime. O único conteúdo existente é:
+A v1 do servidor MCP está implementada em Go. Stack:
 
-- `data/ARA.sqlite` — texto bíblico da versão "Almeida Revista e Atualizada"
-- `data/ARC.sqlite` — texto bíblico da versão "Almeida Revista e Corrigida"
-- `data/NVI.sqlite` — texto bíblico da versão "Nova Versão Internacional"
+- Go 1.25+ (ver `go.mod`).
+- `github.com/modelcontextprotocol/go-sdk/mcp` — SDK oficial de MCP, transporte stdio (`mcp.StdioTransport`).
+- `github.com/google/jsonschema-go/jsonschema` — schemas de entrada das ferramentas, com enum dinâmico de `book`/`version`.
+- `modernc.org/sqlite` — driver SQLite puro Go (sem cgo), acesso somente leitura (`mode=ro`).
 
-O nome do projeto (`bible-mcp`) e o conteúdo de `data/` indicam que o objetivo é implementar um servidor MCP (Model Context Protocol) que exponha esse texto bíblico como ferramentas/recursos para um LLM. Nenhuma implementação de servidor MCP existe ainda — isso ainda está por ser construído.
+Estrutura:
 
-Não há comandos de build, lint ou teste a documentar até que o código seja criado. Ao iniciar a implementação, atualize esta seção com o stack escolhido (linguagem/runtime MCP SDK) e os comandos correspondentes.
+- `main.go` — binário: lê `BIBLE_MCP_DATA_DIR`, abre o `Store`, registra as ferramentas, roda o transporte stdio.
+- `internal/bible` — camada de domínio: `Canon`/`BookByName` (catálogo canônico dos 66 livros), `Store`/`Open` (descoberta e validação de Versões `.sqlite`), `Verses` (consulta unificada de Versículo/Passagem/Capítulo), `FormatQuote` (formatação de saída).
+- `internal/mcpserver` — camada de protocolo: `Handlers` (`GetVerse`, `GetPassage`, `GetChapter`), schemas de entrada, `Register` (registro das 3 ferramentas no `*mcp.Server`).
+- `data/ARA.sqlite`, `data/ARC.sqlite`, `data/NVI.sqlite` — as três Versões (ARA/ARC/NVI) usadas como diretório de dados padrão.
+
+Ferramentas MCP expostas: `get_verse`, `get_passage`, `get_chapter` (ver `spdd/prompt/GGQPA-XXX-202607162106-[Feat]-mcp-verse-passage-chapter-tools.md` para a especificação completa e `README.md` para exemplos de uso).
+
+Configuração obrigatória: variável de ambiente `BIBLE_MCP_DATA_DIR` apontando para um diretório com arquivos `.sqlite` no esquema descrito abaixo — o servidor falha ao iniciar (`log.Fatal`) se a variável estiver vazia, o diretório não tiver nenhum `.sqlite` válido, ou qualquer arquivo reprovar a validação de alinhamento com o cânone (ver `docs/adr/0001-canonical-book-identity.md` e `docs/adr/0002-external-data-directory.md`).
+
+Comandos:
+
+```bash
+go build -o bible-mcp .   # build do binário
+go test ./...             # suíte de testes (internal/bible, internal/mcpserver)
+```
 
 ## Dados: esquema dos bancos SQLite
 
